@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Meu Site</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+  <body>
+    <div class="container">
+        <!-- Cabeçalho -->
+
+        <nav class="row">
+            <nav class="navbar navbar-expand-sm navbar-light bg-light col-lg-12 p-2 fixed-top">
+                <a class="navbar-brand" href="#">ANGEL</a>
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Inicio<span class="sr-only">(current)</span></a>
+                        </li>
+            
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">seleção</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                <a class="dropdown-item" href="sobre">Sobre Mim</a>
+                                <a class="dropdown-item" href="#">Projetos</a>
+                                <a class="dropdown-item" href="#">Contatos</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+        </nav>
+        <header class="container-liquid row">
+            <div class="container bg-dark col-lg-12 py-5">
+                <h3 class="text-white text-center m-3">MEU SITE</h3>
+                <h4 class="text-center text-white ">Este é um site feito para mostrar os meus projetos e meus contatos para que eu possa usar minhas habilidades técnicas.</h4>
+            </div>
+        </header>    
+
+    
+    
+        <!-- Sobre Mim -->
+        <section id="sobre">
+        <div class="row">
+        <img class="rounded-circle col-lg-6 p-3" src="cadeira 1.jpg">
+        <p class="col-lg-6 p-3 color-changed">Eu sou aluno do Senai e estou estudando desenvolvimento de sistemas, este site que voce esta vendo é um exercício, isto prova a minha evolução e força de vontade. O mundo da TI é bem desconhecido para mim na verdade, mesmo estando um 1 ano não consigo acreditar que pequenos circuitos podem fazer algo tão complexo, e também, a energia ser tão estável é tão irreal.</p>
+        
+        </div>
+        </section>
+      
+        <!-- Projetos -->
+        <section id="projetos" class="col-lg-13 row">
+        
+                <div class="card-columns">
+                    <div class="card">
+                        <img class="card-img-top" alt="sei lá" src="projeto 1.png">
+                        <div class="card-body">
+                            <h4 class="card-title">Pizzaria</h4>
+                            <p class="card-text">Foi usado a linguagem html, css para cria-l0.Para escolher a pizza que voce quer, voce tem que clicar nas imagem deseja, após esse, abrirá uma outra pagina com os detalhes e o preço da pizza, compra se desejar.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="projeto 1.png" alt="o que estou fazendo">
+                        <div class="card-body">
+                            <h4 class="card-title">Não deu tempo</h4>
+                            <p class="card-text"> 
+ 
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at commodo odio. In placerat molestie diam, eget porttitor ante scelerisque vel. Donec non nibh non ipsum pulvinar pretium. Mauris pretium euismod lorem. Suspendisse at accumsan est, quis feugiat diam. Suspendisse potenti. Curabitur semper quam molestie quam hendrerit, quis consequat lacus commodo. Vestibulum a leo lacus. Nullam quis orci vitae nunc tempor rutrum. Praesent at sagittis elit. Nulla maximus tempor orci elementum pellentesque.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top"src="projeto 1.png"  alt="o que estou fazendo">
+                        <div class="card-body">
+                            <h4 class="card-title">Não deu tempo</h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at commodo odio. In placerat molestie diam, eget porttitor ante scelerisque vel. Donec non nibh non ipsum pulvinar pretium. Mauris pretium euismod lorem. Suspendisse at accumsan est, quis feugiat diam. Suspendisse potenti. Curabitur semper quam molestie quam hendrerit, quis consequat lacus commodo. Vestibulum a leo lacus. Nullam quis orci vitae nunc tempor rutrum. Praesent at sagittis elit. Nulla maximus tempor orci elementum pellentesque.</p>
+                        </div>
+                    </div>
+                </div>
+        
+        </section>
+    
+        <!-- Contato -->
+        <section id="contato" class="row">
+        
+        <div class="form-group row col-md-3 mr-2">
+          <label for="">E-mail</label>
+          <input type="email" class="form-control " name="" id="" aria-describedby="emailHelpId" placeholder="digiteseuemail@help.com.br">
+          <small id="emailHelpId" class="form-text text-muted">Digite seu email</small>
+        </div>
+        <div class="form-group row col-md-3 mr-2">
+            <label for="">Telefone</label>
+            <input type="tel" class="form-control"  aria-describedby="emailHelpId" placeholder="(00) 0000-0000" >
+            <small id="emailHelpId" class="form-text text-muted">Digite seu Telefone</small>
+        </div>
+        <div class="form-group form-check col-lg-12">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Clique em mim</label>
+          </div>
+          <button type="submit" class="btn bg-dark text-white">Enviar</button>
+        </section>
+      
+        <!-- Rodapé -->
+        <footer class="row">
+            <div class="container col-lg-5">
+                <p class="col-lg-12">&copy; 2025 Todos os direitos reservados por Vinicius_alves9</p>
+                <p  class="col-lg-12">Desenvolvido por Vinicius_alves9</p>
+                
+                  <a href="#" class="col-lg-6 mr-4">Linkedin</a>
+                  <a href="https://github.com/vinicius835" class="mr-4">GitHub</a>
+                  <a href="#" class="mr-4">Instagram</a>
+                </div>
+              
+        </footer>
+      </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

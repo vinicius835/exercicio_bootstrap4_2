@@ -1,0 +1,14 @@
+.color-changed{
+    display: inline;
+    transition: 0.1s ease;
+    }
+    .color-changed:hover{
+        color:rgb(66, 66, 66);
+        
+    }
+    .card:hover{
+        background-color: rgb(192, 190, 190);
+        border: solid grey 1px;
+        box-shadow: 0 0 15px 0;
+        transition: 0.5s;
+    }
