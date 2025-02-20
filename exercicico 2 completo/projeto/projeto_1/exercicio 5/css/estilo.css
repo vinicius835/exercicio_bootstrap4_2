@@ -1,0 +1,78 @@
+.container1{display:flex; 
+    margin-left:20px; 
+      
+  }
+  .container2{
+      display:flex;
+      margin-left:20px;
+      margin-top:-150px;
+      
+  }
+  .container3{display:flex;
+      margin-left:20px;
+      margin-top:-150px;
+      
+  }
+  
+  article{
+      height:450px;
+      width:280px;
+  }
+  p{
+      width:255px;
+  }
+  header{display: flex;
+  padding-left:610px;
+  background-color:coral;
+  width: all;
+  }
+  
+  fieldset{
+      width:500px;
+      height:950px;
+      border:transparent;
+      background-color: antiquewhite;
+      margin-left:200px;
+  }
+  body{
+      background-color: bisque;
+  }
+  h3{display: flex;
+ margin-left:410px;}
+
+ h4{text-align: center;
+    padding-right:30px ;}
+p{font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif}
+/* PAGINA.HTML */
+/*             */
+.subpag{
+    display: flex;
+    margin-left:700px;
+    
+}
+.setpag{margin-left:370px;
+    width:700px;
+    height:660px;
+}
+.hpag{text-align:center;
+width:600px;
+}
+.cont{padding-left:50px;}
+.ppag{
+width:600px;
+}
+.compra{
+    background-color:greenyellow;
+    border-color:green;
+    height:25px;
+    width:100px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+.compra:hover{
+    background-color:yellow;
+    border-color:green;
+    height:30px;
+    width:105;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

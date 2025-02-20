@@ -1,0 +1,52 @@
+.lateral{margin-top:-1346px;
+ margin-right:70px;
+float:right;}
+a{
+    text-decoration:none;
+    color:rgba(21, 121, 18, 0.897);
+    margin-left:10px;
+}
+.caixa{
+    padding-left:570px;
+    background-color:rgba(253, 245, 127, 0.952);
+    clear:left;
+
+}
+a:hover{
+    color:rgb(207, 57, 2);
+}
+body{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+background-color: wheat;
+}
+
+fieldset{background-color: rgba(255, 255, 255, 0.822);
+border-radius:10px;
+margin-top:10px;
+width:400px;
+float: left;
+}
+img{
+    margin-left:10px;
+} 
+footer{
+    float:right;
+    margin-top:-950px;
+    margin-right:300px;
+
+}
+.noticiaum{width:500px;  
+    padding-left:300px;
+    float: left;
+    padding-top:10px;}
+
+.noticiadois{width:500px;  
+    padding-left:300px;   
+    clear:left;
+    padding-top:10px;}
+
+h1{padding-top:40px;
+float:left;
+margin-left:670px;}
+h3{background-color: brown;
+width:160px;
+color:orange;}
