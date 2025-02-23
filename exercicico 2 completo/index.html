@@ -9,8 +9,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <script src="./javascript/script.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
   <body>
     <div class="container">
@@ -110,15 +111,16 @@
     
         <!-- Contato -->
         <section id="contato" class="row ">
-            <h4 class="text-center row col-lg-12 mt-1 mb-4"> <i class="bi bi-telephone"></i> Contatos </h4>
-        <div class="form-group row col-md-3 mr-2">
+        <h4 class="text-center row col-lg-12 mt-1 mb-4"> <i class="bi bi-telephone"></i> Contatos </h4>
+        <form id="contact-form" class="row">
+        <div class="form-group form-label row col-md-3 mr-2">
           <label for="">E-mail</label>
-          <input type="email" class="form-control " name="" id="" aria-describedby="emailHelpId" placeholder="digiteseuemail@help.com.br">
+          <input type="email" class="form-control " name="" id="" aria-describedby="emailHelpId" placeholder="digiteseuemail@help.com.br" required>
           <small id="emailHelpId" class="form-text text-muted">Digite seu email</small>
         </div>
         <div class="form-group row col-md-3 mr-2">
             <label for="">Telefone</label>
-            <input type="tel" class="form-control"  aria-describedby="emailHelpId" placeholder="(00) 0000-0000" >
+            <input type="tel" class="form-control"  aria-describedby="emailHelpId" placeholder="(00) 0000-0000" required >
             <small id="emailHelpId" class="form-text text-muted">Digite seu Telefone</small>
         </div>
         <div class="form-group  row col-lg-7">
@@ -126,25 +128,29 @@
           <textarea class="form-control" name="" id="" rows="3" collumns="4" placeholder="(Opcional)"></textarea>
         </div>
 
-        <div class="dropdown">
-            <button class="btn bg-dark text-white dropdown-toggle mt-5 ml-2" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Tipo de Mensagem
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-              <button class="dropdown-item" type="button">Dúvida</button>
-              <button class="dropdown-item" type="button">Pedido</button>
-              <button class="dropdown-item" type="button">Reclamação</button>
-            </div>
-          </div>
-
-
-
+        <div class="form-group mt-4 p-1 ml-2">
+        <label for="">Quer me contactar por:</label>
+        <select class="form-control" id="motivo_contactar" required>
+            <option value="-1" selected>selecione</option>
+            <option value="Dúvida">Dúvida</option>
+            <option value="Negócios">Negócios</option>
+            <option value="Reclamação">Reclamação</option>
+        </select>
+        </div>
+    
         <div class="form-group form-check col-lg-12">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1">Concordo em receber notificaões</label>
           </div>
-          <button type="submit" class="btn bg-dark text-white">Enviar</button>
-        
+          <button type="submit" class="btn btn-secondary bg-dark text-white">Enviar</button>
+        </form>
+        <div class="alert alert-primary d-none col-lg-12 mt-3" id="tudo_pronto" role="alert">
+            <strong>!CONTATO ENVIADO!</strong>
+        </div>
+        <div class="alert alert-danger d-none  col-lg-12 mt-3 " id="Ocorreu_um_erro" role="alert">
+            <strong>!Favor, Selecionar o motivo!</strong>
+        </div>
+    
         </section>
       
         <!-- Rodapé -->
@@ -161,6 +167,23 @@
       </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+     <script>
+        
+    forma=document.getElementById("contact-form")
+
+    forma. addEventListener ("submit", function(event){
+    event.preventDefault();
+    if(motivo_contactar.value == -1){
+        document.getElementById("Ocorreu_um_erro").classList.remove("d-none")
+        return true;
+    }
+    document.getElementById("Ocorreu_um_erro").classList.add("d-none")
+    document.getElementById("tudo_pronto").classList.remove("d-none");
+    document.getElementById("contact-form").reset();
+});
+
+
+     </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
