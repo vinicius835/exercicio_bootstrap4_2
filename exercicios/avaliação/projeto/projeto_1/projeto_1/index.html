@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca de Usuários</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .font-family-arial{font-family: Arial, Helvetica, sans-serif;}
+        .font-family-Courier{font-family: 'Consolas', 'Courier New', monospace;}
+        .bg-grey{background-color: rgb(218, 213, 213); border: ridge 2px rgb(218, 213, 213);}
+        .alert-danger{border: ridge 2px red;}
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        
+        <h2 class="text-center mb-4  bg-success font-family-arial  text-white col-lg-12">Buscar Usuário</h2>
+        
+        <!-- Campo de entrada e botão -->
+        <div class="input-group mb-3">
+            <input type="number" id="userId" class="form-control col-md-10" placeholder="Digite o ID do usuário (1 a 10)">
+            <button id="searchButton" class="btn btn-success text-white font-family-arial row col-md-2">Buscar</button>
+            
+        </div>
+        <div>
+        <button type="button" id="limpar" class="btn btn-secondary font-family-arial mb-2">Limpar Resultados</button>
+        </div>
+        <div class="spinner-border text-primary col-1 d-none mt-1" id="gyro" role="status">
+            <span class="sr-only"></span>
+          </div>
+
+        <!-- Área para exibir os resultados -->
+        <div id="userInfo" class="mt-4"></div>
+    </div>
+
+    <script>
+        
+        limpar=document.getElementById("limpar")
+        document.getElementById("searchButton").addEventListener("click", function() {
+             document.getElementById("gyro").classList.remove("d-none")
+            let userId = document.getElementById("userId").value;
+
+            // TO DO: Completar a requisição AJAX usando fetch()
+            fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
+                .then(response =>{
+                    if(!response.ok){
+                        document.getElementById("gyro").classList.add("d-none")
+                        throw new Error('Usuário não encontrado')
+                    }
+                    return response.json();
+                })
+                .then(user => {
+                    document.getElementById("gyro").classList.add("d-none")
+                    // TODO: Exibir os dados do usuário no HTML
+                    userCard = `
+                        <div class="card mt-3 mb-3  ">
+                            <div class="card-body font-family-Courier bg-grey ">
+                                <h5 class="card-title">${user.name}</h5>
+                                <p class="card-text"><strong>Email:</strong> ${user.email}</p>
+                                <p class="card-text"><strong>Telefone:</strong> ${user.phone}</p>
+                                <p class="card-text"><strong>Empresa:</strong> ${user.company.name}</p>
+                            </div>
+                        </div>
+                    `;
+                    document.getElementById("userInfo").innerHTML += userCard;
+                })
+                .catch(error => {
+                    document.getElementById("gyro").classList.add("d-none")
+                    // TO DO: Exibir mensagem de erro amigável
+                    errcard= `
+                        <div class="alert alert-danger">Usuário com ID ${userId} não encontrado!</div>
+                    `;
+                    document.getElementById("userInfo").innerHTML +=errcard;
+                });
+                
+        });
+        limpar.addEventListener("click", function() {
+            userInfo.innerHTML = '';
+            gyro.classList.add("d-none"); 
+        });
+    </script>
+</body>
+</html>

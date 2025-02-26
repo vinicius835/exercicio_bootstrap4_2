@@ -1,0 +1,35 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+
+}
+#fashion{
+    display: flex;
+    float: left;
+    margin-left:150px;
+    /* align-self: center; */
+    background-color:bisque;
+    /* width:600;
+    height:600; */
+    
+}
+.contr{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: brown;
+    text-align: center;
+}
+#cub{
+display: block;
+margin-left: 400px;
+display: flex;
+float: left;
+
+
+}
+fieldset{
+    border-color:brown;
+    background-color: bisque;
+    border-radius: 25px;
+    border-width: 4px;
+    
+}

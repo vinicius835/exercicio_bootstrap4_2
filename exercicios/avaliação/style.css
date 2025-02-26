@@ -1,0 +1,29 @@
+/* Adicione no styles.css */
+a{text-decoration: none;
+  color:grey;}
+
+.grass{color: transparent;transform:scale(0.8) skewX(80deg) skewY(10deg);}
+.grass:hover{color: black; transition-duration: 1s;transform: scale(1.2);}
+.my-face{width:300px;height:300px;}
+
+.size-img:hover{
+  transform: scale(1.02);
+  transition-duration: 2s;
+  border-radius: 5px;
+  
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+@keyframes size-img{
+  0%,100%{transform: translateY(0);}50%{transform: translateY(-10px);}
+}
+
+  
+  section {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+
